@@ -49,3 +49,9 @@ jobs:
         run: echo "param2 ${{ inputs.param2}}"
       - name: input3
         run: echo 'param3 ${{ inputs.param3}}'
+      - name: conditional1
+        run: echo "param is goodd"
+        if: ${{ inputs.param1 == good }}
+      - name: conditional2
+        run: echo "param is badd"
+        if: ${{ inputs.param1 == bad }}
