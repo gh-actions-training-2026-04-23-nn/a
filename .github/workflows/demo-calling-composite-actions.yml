@@ -1,0 +1,20 @@
+name: democomp
+run-name: run demo comp
+
+on:
+  workflow_displatch:
+
+jobs:
+  Demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: chckout
+        uses: actions/checkout@v4
+      - name: compodemo
+        id: greeting-step
+        uses: ./.github/actions/demo-composite-actions
+        with:
+          greeting: "A"
+          name: "B"
+      - name: show
+        run: echo '${{ steps.greeting-step.outputs.greeting-text }}'
