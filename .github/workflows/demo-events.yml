@@ -38,3 +38,11 @@ jobs:
         if: ${{ inputs.param1 == 'dog' }}
       - name: location
         run: echo ${{ env.LOCATION }}
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump github event context
+        run: echo '${{ toJson(github.event) }}'
+      - name: Dump runner context
+        run: echo '${{ toJson(runner) }}'
