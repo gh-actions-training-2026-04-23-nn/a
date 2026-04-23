@@ -2,7 +2,7 @@ name: democomp
 run-name: run demo comp
 
 on:
-  workflow_displatch:
+  workflow_dispatch:
 
 jobs:
   Demo:
