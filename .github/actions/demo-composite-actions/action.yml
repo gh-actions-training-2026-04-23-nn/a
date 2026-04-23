@@ -26,6 +26,8 @@ runs:
       shell: bash
     - name: Generate output
       id: generate-output-step
+      env:
+        OUTPUT: '${{ inputs.greeting }}, ${{ inputs.name }}'
       run: echo "output=$OUTPUT" >> $GITHUB_OUTPUT
       shell: bash
 
