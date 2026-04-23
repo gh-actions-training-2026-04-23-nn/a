@@ -22,3 +22,5 @@ jobs:
           name: "Imhotep"
       - name: Show output from last step
         run: echo '${{ steps.greeting-step.outputs.greeting-text }}'
+      - name: Show extra output from last step
+        run: echo '${{ steps.greeting-step.outputs.extra-text }}'
