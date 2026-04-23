@@ -1,0 +1,24 @@
+name: Demo calling contaienr actions
+run-name: vvvvvvvvvvvvvvvvvvvv
+
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        required: true
+      name:
+        required: true
+jobs:
+  demo_container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chechk out the repo to teh runner
+        uses: actions/checkout@v4
+      - name: Demo calling contaienr action
+        id: greeting-step
+        uses: ./.github/actions/demo-container-actions
+        with:
+          greeting: "Good afternoon"
+          name: "Imhotep"
+      - name: Show output from last step
+        run: echo '${{ steps.greeting-step.outputs.greeting-text }}'
