@@ -27,6 +27,8 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      LOCATION: SE3
     steps:
       - name: conditional1
         run: echo "param is CAT"
@@ -34,3 +36,5 @@ jobs:
       - name: conditional2
         run: echo "param is DOG"
         if: ${{ inputs.param1 == 'dog' }}
+      - name: location
+        run: echo ${{ env.LOCATION }}
