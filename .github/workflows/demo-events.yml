@@ -16,8 +16,8 @@ on:
     types:
       - opened
       - closed
-  #schedule:
-  #  - cron: * * * * *
+  schedule:
+    - cron: 0 0 0 0 0
 
   # Manual events
   workflow_dispatch:
