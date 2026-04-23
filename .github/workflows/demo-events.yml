@@ -28,17 +28,9 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-#      - name: step1
-#        run: echo "This is job1 step1"
-#      - name: inputs1
-#        run: echo param1 ${{ inputs.param1}}
-#      - name: input2
-#        run: echo "param2 ${{ inputs.param2}}"
-#      - name: input3
-#        run: echo 'param3 ${{ inputs.param3}}'
       - name: conditional1
         run: echo "param is CAT"
-        if: ${{ inputs.param1 == "cat" }}
+        if: ${{ inputs.param1 == 'cat' }}
       - name: conditional2
         run: echo "param is DOG"
-        if: ${{ inputs.param1 == "dog" }}
+        if: ${{ inputs.param1 == 'dog' }}
