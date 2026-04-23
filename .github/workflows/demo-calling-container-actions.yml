@@ -3,11 +3,7 @@ run-name: vvvvvvvvvvvvvvvvvvvv
 
 on:
   workflow_dispatch:
-    inputs:
-      greeting:
-        required: true
-      name:
-        required: true
+
 jobs:
   demo_container:
     runs-on: ubuntu-latest
