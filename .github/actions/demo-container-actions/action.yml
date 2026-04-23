@@ -13,6 +13,8 @@ inputs:
 outputs:
   greeting-text:
     description: "Greeting text"
+  extra-text:
+    description: "Greeting text"
 
 runs:
   using: docker
